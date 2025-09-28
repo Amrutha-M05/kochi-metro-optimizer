@@ -178,7 +178,7 @@ python -m pytest tests/
 
 ## 📈 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/kochi-metro-optimizer)
+![GitHub stars](https://img.shields.io/github/stars/Amrutha-M05/kochi-metro-optimizer)
 ![GitHub forks](https://img.shields.io/github/forks/yourusername/kochi-metro-optimizer)
 ![GitHub issues](https://img.shields.io/github/issues/yourusername/kochi-metro-optimizer)
 ![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/kochi-metro-optimizer)
