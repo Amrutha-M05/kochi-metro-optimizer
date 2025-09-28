@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kochi Metro Route Optimizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f2f5; }
+        .container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+        h1 { color: #3498db; }
+        .error { color: red; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #3498db; color: white; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Kochi Metro Route Optimizer</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <label>Starting Station:</label>
+        <select name="start_station">
+            <option value="">Select starting station...</option>
+            {% for station in stations %}
+                <option value="{{ station }}">{{ station }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label>Cost Weight:</label>
+        <input type="number" step="0.1" name="cost_weight" value="0.3">
+        <label>Time Weight:</label>
+        <input type="number" step="0.1" name="time_weight" value="0.4">
+        <label>Stops Weight:</label>
+        <input type="number" step="0.1" name="stops_weight" value="0.3">
+        <br><br>
+
+        <button type="submit">Calculate Optimal Routes</button>
+    </form>
+
+    {% if results %}
+        <h2>Optimal Routes</h2>
+        <table>
+            <tr>
+                <th>Destination</th>
+                <th>Cost</th>
+                <th>Time (min)</th>
+                <th>Stops</th>
+                <th>Path</th>
+            </tr>
+            {% for dest, info in results.items() %}
+            <tr>
+                <td>{{ dest }}</td>
+                <td>₹{{ info.total_cost }}</td>
+                <td>{{ info.total_time }}</td>
+                <td>{{ info.total_stops }}</td>
+                <td>{{ " → ".join(info.path) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</div>
+</body>
+</html>
