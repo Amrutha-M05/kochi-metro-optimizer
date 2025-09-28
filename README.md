@@ -114,11 +114,14 @@ composite_distance = (cost_weight * normalized_cost +
 kochi-metro-optimizer/
 ├── dijkstra.py           # Core algorithm and network implementation
 ├── metro_gui.py          # Tkinter GUI interface
+├── templates/            
+│   └── index.html
+├── app.py                # web-based GUI using Flask
 ├── requirements.txt      # Python dependencies
-├── README.md            # Project documentation
-├── screenshots/         # GUI screenshots
+├── README.md             # Project documentation
+├── screenshots/          # GUI screenshots
 │   └── gui_interface.png
-└── tests/               # Unit tests
+└── tests/                # Unit tests
     ├── test_network.py
     ├── test_algorithm.py
     └── test_gui.py
