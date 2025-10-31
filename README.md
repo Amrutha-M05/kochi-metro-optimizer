@@ -157,7 +157,7 @@ Contributions are welcome! Here's how you can help:
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/kochi-metro-optimizer.git
+git clone https://github.com/Amrutha-M05/kochi-metro-optimizer.git
 
 # Create virtual environment
 python -m venv venv
