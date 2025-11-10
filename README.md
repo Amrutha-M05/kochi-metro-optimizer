@@ -56,6 +56,8 @@ A Python-based route optimization system for Kochi Metro using **Dijkstra's Algo
 
 ![GUI Screenshot Placeholder](screenshots/gui_interface.png)
 
+![GUI Screenshot Placeholder](screenshots/path_finder.png)
+
 ### Command Line Interface
 
 ```python
@@ -120,11 +122,9 @@ kochi-metro-optimizer/
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Project documentation
 ├── screenshots/          # GUI screenshots
-│   └── gui_interface.png
-└── tests/                # Unit tests
-    ├── test_network.py
-    ├── test_algorithm.py
-    └── test_gui.py
+│   ├── gui_interface.png 
+|   ├── path_finder.png
+
 ```
 
 ## 🔧 Technical Specifications
